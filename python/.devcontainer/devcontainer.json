@@ -4,6 +4,8 @@
   "dockerFile": "./Dockerfile",
   "settings": {
     "terminal.integrated.defaultProfile.linux": null,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
     "python.pythonPath": "/usr/local/bin/python",
     "python.testing.pytestArgs": [
       "tests",
@@ -43,7 +45,8 @@
     "editor.formatOnSave": true,
     "[python]": {
       "editor.defaultFormatter": "ms-python.python"
-    }
+    },
+    "code-runner.clearPreviousOutput": true
   },
   "extensions": [
     "ms-python.python",
@@ -54,7 +57,16 @@
     "visualstudioexptteam.vscodeintellicode",
     "njpwerner.autodocstring",
     "oderwat.indent-rainbow",
-    "shardulm94.trailing-spaces"
+    "shardulm94.trailing-spaces",
+    "formulahendry.code-runner",
+    "yzhang.markdown-all-in-one",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter-renderers",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-toolsai.vscode-jupyter-slideshow",
+    "IBM.output-colorizer",
+    "esbenp.prettier-vscode"
   ],
   "forwardPorts": [
     8000,

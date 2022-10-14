@@ -1,0 +1,64 @@
+{
+  "name": "github-readme-stats",
+  "context": "..",
+  "dockerFile": "./Dockerfile",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": null,
+    "editor.formatOnSave": true,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "eslint.enable": false,
+    "prettier.documentSelectors": [
+      "**/*.{ts,js,tsx,jsx}"
+    ],
+    "[json]": {
+      "editor.formatOnSave": true,
+      "editor.quickSuggestions": {
+        "strings": true
+      },
+      "editor.suggest.insertMode": "replace"
+    },
+    "editor.guides.bracketPairs": true,
+    "[javascript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.stickyScroll.enabled": true
+  },
+  "extensions": [
+    "usernamehw.errorlens",
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "vscode-icons-team.vscode-icons",
+    "mechatroner.rainbow-csv",
+    "redhat.vscode-yaml",
+    "visualstudioexptteam.vscodeintellicode",
+    "njpwerner.autodocstring",
+    "oderwat.indent-rainbow",
+    "shardulm94.trailing-spaces",
+    "yzhang.markdown-all-in-one",
+    "IBM.output-colorizer",
+    "esbenp.prettier-vscode"
+  ],
+  "forwardPorts": [
+    3000,
+    3000
+  ],
+  "postCreateCommand": "yarn install",
+  "mounts": [
+    "source=/tmp,target=/tmp,type=bind,consistency=cached"
+  ]
+}
