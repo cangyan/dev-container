@@ -1,2 +1,2 @@
 # dev-container
-vscode devcontainer集合。golang, python, nodejs, flutter等
+vscode devcontainer集合。golang, python, nodejs等
