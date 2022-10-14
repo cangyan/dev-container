@@ -1,5 +1,5 @@
 {
-  "name": "{{cookiecutter.project_slug}}",
+  "name": "golang-dev",
   "context": "..",
   "dockerFile": "./Dockerfile",
   "settings": {

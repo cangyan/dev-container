@@ -1,5 +1,5 @@
 {
-  "name": "github-readme-stats",
+  "name": "nodejs-dev",
   "context": "..",
   "dockerFile": "./Dockerfile",
   "settings": {
