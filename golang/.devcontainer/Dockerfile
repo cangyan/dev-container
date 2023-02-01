@@ -12,3 +12,6 @@ RUN openssl s_client -showcerts -connect proxy.golang.org:443 </dev/null 2>/dev/
 # Update certificates
 
 RUN update-ca-certificates
+
+RUN go install github.com/cosmtrek/air@latest
+RUN go install golang.org/x/tools/gopls@latest
