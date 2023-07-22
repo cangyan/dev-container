@@ -1,4 +1,4 @@
 FROM node:18-alpine3.15
 
 RUN apk update && \
-    apk add git
+    apk add --no-cache git aws-cli

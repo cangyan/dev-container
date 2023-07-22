@@ -51,7 +51,8 @@
     "shardulm94.trailing-spaces",
     "yzhang.markdown-all-in-one",
     "IBM.output-colorizer",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "amazonwebservices.aws-toolkit-vscode"
   ],
   "forwardPorts": [
     3000,
@@ -59,6 +60,7 @@
   ],
   "postCreateCommand": "yarn install",
   "mounts": [
-    "source=/tmp,target=/tmp,type=bind,consistency=cached"
+    "source=/tmp,target=/tmp,type=bind,consistency=cached",
+    "source=${env:HOME}/.aws,target=/root/.aws,type=bind"
   ]
 }

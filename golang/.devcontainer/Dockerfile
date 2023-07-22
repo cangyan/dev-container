@@ -1,7 +1,7 @@
-FROM golang:1.17-alpine3.14
+FROM golang:1.20-alpine3.17
 
 RUN sed -i 's/https/http/' /etc/apk/repositories
-RUN apk add --no-cache git openssl ca-certificates
+RUN apk add --no-cache git openssl ca-certificates aws-cli
 
 ARG cert_location=/usr/local/share/ca-certificates
 
