@@ -1,20 +1,17 @@
-FROM alpine:3.17
+FROM ubuntu:22.04
 
-ARG PKG="git vim curl unzip zip sudo bash"
+SHELL ["/bin/bash", "-c"]
 
-RUN apk update && \
-    apk add --no-cache ${PKG}
+RUN apt-get update \
+    && apt-get install -y sudo unzip zip vim tar curl jq git
 
-ARG USERNAME=vscode
+ARG USER_NAME=vscode
 ARG USER_GROUP_NAME=workspace
 ARG USER_UID=1000
 ARG USER_GID=1000
 
-SHELL ["/bin/bash", "-c"]
-
-RUN addgroup --system --gid ${USER_GID} ${USER_GROUP_NAME} \
-    && adduser --system --disabled-password --home /home/${USERNAME} \
-    --uid ${USER_UID} --shell /bin/bash --ingroup ${USER_GROUP_NAME} ${USERNAME} \
+RUN groupadd --gid ${USER_GID} ${USER_GROUP_NAME} \
+    && useradd --uid ${USER_UID} --gid ${USER_GID} --shell /bin/bash --create-home -m ${USER_NAME} \
     && echo "${USER_GROUP_NAME}	ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers.d/${USER_GROUP_NAME} \
     && chmod 0440 /etc/sudoers.d/${USER_GROUP_NAME}
 
